@@ -736,9 +736,10 @@ footer {
     }
 
     #lightbox {
-        width: 350px;
-        height: 260px;
-     
+        width: 400px;
+        height: 350px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .gallery-section h3 {
