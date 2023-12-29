@@ -27,6 +27,7 @@ body {
 .nav-container {
     position: fixed;
     width: 100%;
+    height: auto;
     top: 0;
     z-index: 1000;
     display: flex;
@@ -39,6 +40,7 @@ body {
     border-bottom: 1px solid rgb(2, 16, 28);
 
 
+
 }
 
 .hamburger {
@@ -46,10 +48,11 @@ body {
     display: none;
     position: absolute;
     bottom: 10px;
-    right: 50px;
+    right: 30px;
     flex-direction: column;
     width: 30px;
     height: auto;
+   
 }
 
 .lines {
@@ -63,7 +66,7 @@ body {
 
     position: fixed;
     left: 20px;
-    top: 20px;
+    top: 35px;
     text-decoration: none;
     font-size: 1.5rem;
     align-self: center;
@@ -462,7 +465,7 @@ footer {
 
 .footer .footer-logo {
     align-self: center;
-    
+    margin: 50px;
 }
 
 
@@ -520,7 +523,9 @@ footer {
         height: 60px;
     }
 
-
+    #logo {
+        top: 25px;
+    }
 
     .links {
        display: none; 
@@ -549,13 +554,13 @@ footer {
     .links.active  {
       display: flex;
       background-color:#202f39 ;
-      position: relative;
-      top: 40px;
-      right: 25px;
+      width: 100%;
+      position: fixed;
+      top: 60px;
+      right: 0;
       margin-top: 0;
       padding-top: 20px;
       padding-bottom: 20px;
-
     }
 
     .links.active ul {
@@ -646,6 +651,10 @@ footer {
 
     .footer-bottom img {
         width: 60%;
+    }
+
+    .footer .footer-logo {
+        margin: 0;
     }
 
     
