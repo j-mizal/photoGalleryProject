@@ -13,7 +13,7 @@ html {
     font-family: "Merriweather Sans", sans-serif;
     margin: 0;
     padding: 0;
-   
+    overflow-x: hidden;
 }
 
 body {
@@ -300,7 +300,7 @@ body {
 #lightbox {
     display: none;
     position: fixed;
-    top: 80px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     width: 700px;
@@ -312,6 +312,7 @@ body {
     margin-top: 20px;
     padding: 10px;
     border-radius: 5px;
+    z-index: 1000;
 }
 
 
@@ -380,6 +381,7 @@ body {
 /* Contact Me Section */
 
 .contact-me {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
@@ -428,6 +430,7 @@ footer {
 }
 
 .footer {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-top: 25px;
@@ -794,8 +797,7 @@ footer {
     }
     
     #lightbox {
-        top: 100px;
-        padding-bottom: 100px;     
+        width: 370px;   
     }
 
     .about-me-container .my-photo {
@@ -835,12 +837,17 @@ footer {
     }
 
     .footer ul li, .footer p {
-        font-size: .4rem;
         padding-right: 5px;
     }
 
+    .footer-links {
+        padding-left: 10px;
+    }
+
     .footer-bottom {
-        font-size: .3rem;
+        font-size: .4rem;
+        align-items: center;
+        width: 150px;
     }
 }
 
@@ -852,22 +859,52 @@ footer {
         width: 200px;
     }
 
+    #lightbox {
+        padding-bottom: 100px;     
+    }
+
     .about-me-container p {
         width: 300px;
     }
 
-
-    .footer-bottom {
-        font-size: .4rem;
-    }
-
     .footer ul li, .footer p {
-        font-size: .3rem;
         padding-right: 3px;
     }
 
+    .footer-bottom {
+        font-size: .4rem;
+        align-items: center;
+        width: 120px;
+    }
+
+    .footer-bottom span {
+       width: 100px;
+       text-wrap: wrap;
+    }
 }
 
+@media screen and (max-width: 400px) {
+
+    #lightbox {
+        width: 340px;     
+    }
+
+    .footer-links, .footer-contact, .footer-bottom {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .footer-links, .footer-contact, .footer-bottom {
+        width: 25%;
+        margin-right: 10px;
+    }
+
+    .footer-bottom {
+        padding-right: 10px;
+    }
+}
 
 @font-face {
     font-family: 'Merriweather Sans';
