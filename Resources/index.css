@@ -826,10 +826,8 @@ footer {
 
 @media screen and (max-width: 430px) {
 
-
-
     .contact-me p {
-        width: 400px;
+        width: 450px;
     }
 
     .footer {
@@ -847,8 +845,6 @@ footer {
 }
 
 
-
-
 @media screen and (max-width: 415px) {
 
 
@@ -861,10 +857,6 @@ footer {
     }
 
 
-    .contact-me p {
-        width: 350px;
-    }
-
     .footer-bottom {
         font-size: .4rem;
     }
@@ -874,10 +866,7 @@ footer {
         padding-right: 3px;
     }
 
-
 }
-
-
 
 
 @font-face {
