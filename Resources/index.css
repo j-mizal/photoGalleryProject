@@ -1,0 +1,936 @@
+
+:root {
+    --mycolor: #c5e08d;
+}
+
+html {
+    background-color: rgb(2, 16, 28);
+    color: var(--mycolor);
+    font-family: "Merriweather Sans", sans-serif;
+   
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Nav Section */
+
+.nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #36454F;
+    border-bottom: 1px solid rgb(2, 16, 28);
+
+
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
+    flex-direction: column;
+    width: 30px;
+    height: auto;
+}
+
+.lines {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+#logo {
+
+    position: fixed;
+    left: 20px;
+    top: 35px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+}
+
+.josh  {
+    color: var(--mycolor);
+}
+
+#mizal {
+    color:aliceblue;
+}
+
+.logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+.links {
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.links ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.links li {
+    list-style-type: none;
+}
+
+.links a { 
+    text-decoration: none;
+    color: var(--mycolor);
+    font-size: 1.1rem;
+    padding-right: 50px;
+   
+}
+
+.links a:hover {
+    color: aliceblue;
+}
+
+/* Hero Section */
+
+.hero-container {
+    margin-left: 80px;
+    margin-right: 70px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.hero-container h1 {
+    font-size: 3rem; 
+}
+
+.hero-container h1 span {
+    animation: colorChange 2.5s alternate infinite;
+    font-size: 2.3rem;
+    
+}
+
+
+
+
+@keyframes colorChange {
+    from {
+        color:#e2dee7;
+    }
+    to {
+        color: #91cc1b;
+    }
+}
+
+
+
+.hero-container p {
+    width: 55%;
+    letter-spacing: .7px;
+    word-spacing: .8px;
+    color: rgb(227, 232, 236);
+    
+}
+
+
+.hero-container p span {
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+.grid-container {
+    width: 90%;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width:none;
+    scrollbar-color: transparent transparent;
+}
+
+.grid-container .images {
+    width: 95%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 55px;
+    padding: 30px 40px;
+    flex: none;
+    align-items: center;
+
+  
+}
+
+.grid-container .images img {
+    filter: grayscale(100);
+    transition: transform 0.5s;
+    background-color: aliceblue;
+    padding: 5px;
+    width: 100%;
+    
+}
+
+
+
+
+.grid-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.grid-wrap #next-btn, .grid-wrap #back-btn {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: transform 0.3s;
+   
+}
+
+
+
+#back-btn {
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+#next-btn {
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.grid-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+.grid-container .images img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.150);
+}
+
+.grid-wrap #next-btn:hover, .grid-wrap #back-btn:hover {
+    transform: scale(1.4);
+}
+
+/* Full Gallery Section */
+
+.gallery-container {
+    display: none;
+    justify-content: center;
+    margin: 100px 35px;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+   
+}
+
+
+.gallery-section a {
+    text-decoration: none;
+    color: var(--mycolor);
+   
+}
+
+.gallery-section h3 {
+    margin-top: 0;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.gallery-section h3:hover {
+    color: aliceblue;
+}
+
+.gallery-section .text-a {
+    color:#e2dee7;
+}
+
+.gallery-section #text-b {
+    position: relative;
+}
+
+
+
+#cursor {
+    color: aliceblue;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+
+    }
+    50% {
+        opacity: 0%;
+    }
+}
+
+.gallery-container img {
+    width: 25%;
+    height: auto;
+    padding: 5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 600px;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.lightboxExit {
+    color:#36454F;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+
+}
+
+.lightbox-image {
+    position: relative;
+    top: 25px;
+    max-width: 100%; 
+    max-height: 100%; 
+    margin: auto;
+    display: block;
+    align-items: center;
+}
+
+
+/* About Me Section */
+
+.about-me-section {
+    margin-left: 150px;
+    margin-right: 150px;
+   
+} 
+
+.about-me-container {
+    display: flex;
+    justify-content: center;
+    grid-gap: 30px;
+    align-items: center;
+    margin-top: 150px;
+   
+  
+}
+
+.about-me-container h2 {
+    width: 40%;
+    text-wrap: nowrap;
+
+}
+
+.about-me-container p {
+    color: #e2dee7;
+    width: 100%;
+    padding-right: 60px;
+}
+
+.about-me-container img {
+    padding: 5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.my-photo {
+    height: auto ;
+    width: 300px;
+}
+
+/* Contact Me Section */
+
+.contact-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-gap: 10px;
+    align-items: center;
+    margin-bottom: 250px;
+    margin-top: 250px;
+    background-color:#36454F ;
+    padding: 30px;
+}
+
+.contact-me p { 
+    grid-column: 2 / 3;
+    width: 750px;
+}
+
+
+.contact-me h2 {
+    margin-left: 120px;
+    padding-right: 50px;
+}
+
+#email {
+    font-style: italic;
+}
+
+.contact-me span, .contact-me p {
+    color: aliceblue;
+}
+
+.socials-link {
+    padding-left: 10px;
+    
+}
+
+.socials-link a {
+    color: #c5e08d;
+}
+
+/* Footer Section */
+
+footer {
+    border-top:#36454F 1px solid ;
+    background-color: #414141;
+    padding-bottom: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.footer ul {
+    list-style-type:  none;
+    padding: 0;
+   
+}
+
+.footer h4 {
+    color: #d1d5d7;
+    font-size: .9rem;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    font-size: .7rem;
+    font-style: italic;
+    opacity: .8;
+    width: 300px;
+}
+
+.footer ul li, .footer p {
+    font-size: .7rem;
+}
+
+.footer ul li {
+    padding-bottom: 5px;
+}
+
+.footer .footer-logo {
+    align-self: center;
+    
+}
+
+
+.footer-bottom img {
+    width: 80%;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 10px;
+   
+}
+
+.footer-bottom span, .footer-bottom p {
+    color: aliceblue;
+}
+
+
+
+.footer #footer-logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.footer-links a, .footer-contact p {
+    color: aliceblue;
+    opacity: .8;
+}
+
+.footer-contact span a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding-right: 10px;
+    color: aliceblue;
+}
+
+.footer-contact {
+    padding-bottom: 30px;
+}
+
+.footer-contact a:hover {
+    color: #c5e08d;
+}
+
+.footer-links a:hover {
+    color: #c5e08d;
+} 
+
+/* Responsiveness */
+
+/* Ipad: Portrait */
+
+@media screen and (max-width: 768px) {
+    
+    .nav-container {
+        height: 60px;
+        
+ 
+    }
+
+
+
+    .links {
+       display: none; 
+       width: 100%;
+       flex-direction: column;
+       text-align: center;
+
+    }
+
+    .links a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-items: end;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .links.active  {
+      display: flex;
+      background-color:#202f39 ;
+      position: relative;
+      top: 40px;
+      right: 25px;
+      margin-top: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+    }
+
+    .links.active ul {
+        flex-direction: column;
+    }
+
+    .links.active ul li {
+        padding-bottom: 10px;
+    }
+
+
+    
+    .grid-container .images img:hover {
+        transform: scale(1.45);
+    }
+
+    #lightbox {
+        width: 600px;
+        height: 500px;
+        padding: 10px;
+    }
+
+    .about-me-container {
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+
+    .about-me-container img {
+        width: 50%;
+        height: auto;
+    }
+
+    .about-me-container p, .about-me-container h2 {
+        padding: 0;
+        text-align: center;
+    }
+
+    .about-me-container p {
+        font-size: .9rem;
+    }
+
+    .contact-me {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-me h2 {
+        font-size: 1.1rem;
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .contact-me p {
+        padding-left: 100px;
+        padding-right: 100px;
+
+        font-size: .9rem;
+        text-align: center;
+        width: 650px;
+    }
+
+    .footer {
+        justify-content: space-around;
+    }
+
+    .footer #footer-logo {
+        display: none;
+    }
+
+    .footer h4 {
+        font-size: .7rem;
+    }
+
+    .footer ul li, .footer p {
+        font-size: .6rem;
+    }
+
+    .footer-bottom {
+        align-self: center;
+        width: 200px;
+    }
+
+
+    .footer-bottom span {
+        font-size: .6rem;
+        
+    }
+
+
+    .footer-bottom img {
+        width: 60%;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .hamburger {
+        bottom: 20px;
+        right: 100px;
+        
+    }
+
+    .hero-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-container p {
+        font-size: .8rem;
+    }
+
+    #lightbox {
+        width: 500px;
+        height: 400px;
+     
+    }
+
+    .gallery-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-me-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .about-me-container p {
+        font-size: .8rem;
+    }
+
+    .contact-me h2 {
+        font-size: 1.3rem;
+       
+    }
+
+    .contact-me p {
+        font-size: .8rem;
+        width: 550px;
+    }
+
+
+}  
+
+/* Mobile phone- Portrait */
+
+@media screen and (max-width: 500px) {
+    
+
+    
+    #logo {
+     
+        font-size: 1.2rem;
+     
+    }
+
+    .hamburger {
+       
+        bottom: 20px;
+    }
+
+    .lines {
+        width: 20px;
+      
+    }
+
+    .hero-container .description { 
+        width: 250px;
+    }
+
+    .grid-container .images img:hover {
+   
+        transform: scale(1.5);
+    }
+
+    .grid-container .images img { 
+        padding: 1px;
+    }
+
+    .grid-container .images {
+        grid-gap: 40px;
+    }
+
+    #lightbox {
+        width: 350px;
+        height: 260px;
+     
+    }
+
+    .gallery-section h3 {
+        font-size: 1rem;
+    }
+
+
+    .about-me-container h2 {
+        font-size: 1.1rem;
+    }
+
+    .about-me-container p {
+        font-size: .8rem;
+        width: 350px;
+    }
+
+    .about-me-container h2 {
+        font-size: 1.1rem;
+        width: 100px;
+  
+    }
+
+    .contact-me h2 {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .about-me p {
+        font-size: .6rem;
+        width: 550px;
+    
+    }
+
+    .contact-me p {
+        font-size: .7rem;
+        width: 450px;
+    }
+
+    
+
+    .footer ul li, .footer p {
+
+        font-size: .5rem;
+     
+    
+    }
+
+    .grid-container .images {
+        padding: 15px;
+    }
+
+    .grid-wrap #next-btn, .grid-wrap #back-btn {
+        height: 20px;
+        width: 20px;
+    }
+    
+    #lightbox {
+        top: 100px;
+        padding-bottom: 100px;
+
+      
+    }
+
+    .about-me-container .my-photo {
+        height: auto;
+        width: 150px;
+    }
+
+    .footer-bottom span {
+        width: 180px;
+    }
+
+}
+
+@media screen and (max-width: 455px) {
+
+    .hamburger {
+        bottom: 20px;
+        
+    }
+
+    .about-me-container .my-photo {
+        height: auto;
+        width: 125px;
+    }
+
+    .footer-bottom span {
+        font-size: .5rem;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    .hamburger {
+       
+        bottom: 20px;
+    }
+
+    .contact-me p {
+     
+        width: 400px;
+    }
+
+    .footer {
+        width: 400px;
+    }
+
+    .footer ul li, .footer p {
+        font-size: .4rem;
+        padding-right: 5px;
+    }
+
+    .footer-bottom {
+        font-size: .3rem;
+    }
+}
+
+
+
+
+@media screen and (max-width: 415px) {
+
+    .hamburger {
+        right: 70px;
+        bottom: 20px;
+    }
+
+    .hero-container .description { 
+        width: 200px;
+    }
+
+    .about-me-container p {
+        width: 300px;
+    }
+
+
+    .contact-me p {
+        width: 350px;
+    }
+
+    .footer-bottom {
+        font-size: .4rem;
+    }
+
+    .footer ul li, .footer p {
+        font-size: .3rem;
+        padding-right: 3px;
+    }
+
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/merriweathersans/v26/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX1QjU.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/merriweathersans/v26/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX1QjU.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/merriweathersans/v26/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX1QjU.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+  @font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/merriweathersans/v26/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX1QjU.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
